@@ -62,6 +62,7 @@ contract VotingPoll {
     function Vote(uint256 _topicid,address _creator,uint8 _option) public  {
         require(topicvalidator[_creator][_topicid]==true,"Topic doesnt exist");
         require(block.timestamp<topiclist[_creator][_topicid].expiry,"Voting ended");
+        require(msg.sender==voterlist[msg.sender].voter,"Not a Registered Voter");
         require(votervalidator[_creator][_topicid][msg.sender]==true,"Topic Creator rejected you");
         require(votevalidator[msg.sender][_creator][_topicid]==false,"Already voted");
         require(_option<3,"Invalid Option");
@@ -71,6 +72,7 @@ contract VotingPoll {
 
     function PermissionVoter(address _voter,uint256 _topicid,bool _allow) public {
         require(creatorvalidator[msg.sender][_topicid]==true,"Not a Topic Creator");
+        require(_voter==voterlist[_voter].voter,"Not a Registered Voter");
         votervalidator[msg.sender][_topicid][_voter]=_allow;
     }
     function ResetCount(uint256 _topicid) public {
