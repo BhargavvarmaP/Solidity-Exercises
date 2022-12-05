@@ -1,0 +1,6 @@
+{
+    "solidity.remappings": [
+      "@chainlink/=/nodemodulespackage/@chainlink/contracts@0.5.1",
+      "@openzeppelin/=/nodemodulespackage/@openzeppelin/contracts@4.8.0"
+    ]
+  }

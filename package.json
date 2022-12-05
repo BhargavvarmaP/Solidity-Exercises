@@ -18,9 +18,12 @@
   },
   "homepage": "https://github.com/BhargavvarmaP/Solidity-Exercises#readme",
   "devDependencies": {
+    "@chainlink/contracts": "^0.5.1",
     "@nomicfoundation/hardhat-chai-matchers": "^1.0.4",
     "@nomicfoundation/hardhat-toolbox": "^2.0.0",
     "@nomiclabs/hardhat-ethers": "^2.2.1",
+    "@openzeppelin/contracts": "^4.8.0",
+    "@openzeppelin/hardhat-upgrades": "^1.21.0",
     "chai": "^4.3.7",
     "chai-bn": "^0.3.1",
     "ethers": "^5.7.2",
