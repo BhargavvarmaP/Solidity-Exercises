@@ -14,7 +14,7 @@ module.exports = {
     },
     fuji: {
       url: "https://api.avax-test.network/ext/bc/C/rpc",
-      accounts: ["0cf837e2ab1552a45de172c1231da8fc6bad1c25484dc4ecfabff5550f3b7afb"],
+      accounts: ["01e5efc870b7e6f0ffcda6af75eae42c5446bab600e4eefb78b797d8113b7171"],
   },
   bnbtestnet: {
     url: "https://data-seed-prebsc-1-s1.binance.org:8545/",
